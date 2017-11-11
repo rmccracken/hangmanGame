@@ -1,0 +1,15 @@
+.container{
+	text-align: center;
+	background: tan;
+	border-style: none;
+}
+
+.jumbotron{
+	background: url(../images/safari2.jpg);
+	background-size: 100%;
+}
+
+.panel-body{
+	background: tan;
+	border-style: none;
+}
