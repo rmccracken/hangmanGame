@@ -3,6 +3,7 @@
 // Used to record how many times a letter can be pressed
 var azletter = ['a','b','c','d','e','f','g','h','i','j','k','l',
 				  'm','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
 //words to  guess
 var wordBank =['lion','tiger','giraffe', 'hippopotamus','elephant','rhinoceros',
 				'wildebeest','gorilla', 'cheetah', 'leopard'];
@@ -13,7 +14,7 @@ var lettersInWord = [];
 //number of blanks in choosenWord
 var underscore = 0;
 // Blanks and successful guesses
-var blanksAndSuccesses =[];
+var uscoreAndRguess =[];
 // Wrong guesses
 var wrongLetters = [];
 //Counters
@@ -36,7 +37,7 @@ function reset()
 	rightGuessCounter = 0;
 	guessesLeft = 10;
 	wrongLetters =[];
-	blanksAndSuccesses =[];
+	uscoreAndRguess =[];
 	test=false;
 	startGame();
 }
@@ -52,12 +53,12 @@ function startGame()
 	//Populate blanks
 	for(var i = 0; i< underscore; i++)
 	{
-		blanksAndSuccesses.push('_');
-		document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses;
+		uscoreAndRguess.push('_');
+		document.getElementById('underscores').innerHTML = uscoreAndRguess;
 	}
 
 	//Changes to var's 
-	document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
+	document.getElementById('underscores').innerHTML = uscoreAndRguess.join(' ');
 	document.getElementById('numGuesses').innerHTML = guessesLeft;
 	document.getElementById('winCounter').innerHTML = winCount;
 	document.getElementById('lossCounter').innerHTML = loseCount;
@@ -76,8 +77,8 @@ function compareLetters(userKey)
 						if(lettersInWord[i] === userKey)
 						{
 							rightGuessCounter++;
-							blanksAndSuccesses[i] = userKey;
-							document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
+							uscoreAndRguess[i] = userKey;
+							document.getElementById('underscores').innerHTML = uscoreAndRguess.join(' ');
 						}	
 					}
 				}

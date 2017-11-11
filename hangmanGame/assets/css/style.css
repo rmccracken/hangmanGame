@@ -8,7 +8,9 @@
 	background: url(../images/safari2.jpg);
 	background-size: 100%;
 }
-
+.h3 {
+	background: tan;
+}
 .panel-body{
 	background: tan;
 	border-style: none;
